@@ -7,32 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* font-family: 'Rubik', sans-serif; */
-        
-         :root {
+
+        :root {
             --darker: #003566;
             --dark: #118ab2;
             --regular: #240046;
             --light: #e9ecef;
             --lighter: #e9ecef;
         }
-        
+
         html,
         body {
             min-height: 100%;
             font-size: 100%;
         }
-        
+
         img {
             max-width: 100%;
         }
-        
+
         * {
             /* padding: 0; */
             font-family: "Rubik", sans-serif;
             border-style: none;
             margin: 0;
         }
-        
+
         #h1 {
             /* text-align: center; */
             font-size: 67px;
@@ -43,11 +43,11 @@
             /* font-family: "Open Sans"; */
             color: var(--lighter);
         }
-        
+
         #h1:hover {
             font-weight: 600;
         }
-        
+
         #h2 {
             /* text-align: center; */
             font-size: x-large;
@@ -56,38 +56,38 @@
             /* font-family: cursive; */
             color: var(--light);
         }
-        
+
         .headings {
             display: flex;
             flex-direction: row;
             padding: 15px;
             align-items: center;
         }
-        
+
         .head-des {
             flex-direction: column;
             margin-left: 23px;
         }
-        
+
         .clk,
         a {
             color: inherit;
             text-decoration: none;
         }
-        
+
         .clk:hover {
             color: var(--light);
         }
-        
+
         fieldset {
             background-color: var(--darker);
         }
-        
+
         .topnav {
             overflow: hidden;
             background-color: var(--dark);
         }
-        
+
         .topnav a {
             float: left;
             display: block;
@@ -98,19 +98,19 @@
             text-decoration: none;
             font-size: 17px;
         }
-        
+
         .topnav a:hover,
         .dropdown:hover .dropbtn,
         .dropdown1:hover .dropbtn1 {
             background-color: var(--lighter);
             color: var(--dark);
         }
-        
+
         .topnav a.active {
             background-color: var(--lighter);
             color: var(--dark);
         }
-        
+
         .topnav input[type="text"] {
             background-color: var(--lighter);
             color: var(--dark);
@@ -124,16 +124,16 @@
             -webkit-transition: width 0.4s ease-in-out;
             transition: width 0.4s ease-in-out;
         }
-        
+
         .topnav input[type="text"]:focus {
             width: 40%;
             border-style: none;
         }
-        
+
         .topnav input[type="text"]::placeholder {
             color: var(--dark);
         }
-        
+
         #mySidenav a {
             position: absolute;
             left: -127px;
@@ -146,36 +146,36 @@
             border-radius: 10px 10px 10px 10px;
             text-align: left;
         }
-        
+
         #mySidenav a:hover {
             left: 0;
         }
-        
+
         #register {
             top: 337px;
             background-color: var(--darker);
         }
-        
+
         #alumni {
             top: 248px;
             background-color: var(--darker);
         }
-        
+
         #committe {
             top: 445px;
             background-color: var(--darker);
         }
-        
+
         .dropdown {
             float: left;
             overflow: hidden;
         }
-        
+
         .dropdown1 {
             float: left;
             overflow: hidden;
         }
-        
+
         .dropdown .dropbtn {
             font-size: 16px;
             border: none;
@@ -186,7 +186,7 @@
             font-family: inherit;
             margin: 0;
         }
-        
+
         .dropdown1 .dropbtn1 {
             font-size: 16px;
             border: none;
@@ -197,7 +197,7 @@
             font-family: inherit;
             margin: 0;
         }
-        
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -206,7 +206,7 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-        
+
         .dropdown-content1 {
             display: none;
             position: absolute;
@@ -215,7 +215,7 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-        
+
         .dropdown-content a {
             float: none;
             color: var(--lighter);
@@ -224,7 +224,7 @@
             display: block;
             text-align: left;
         }
-        
+
         .dropdown-content1 a {
             float: none;
             color: var(--lighter);
@@ -233,39 +233,39 @@
             display: block;
             text-align: left;
         }
-        
+
         .dropdown-content a:hover {
             background-color: var(--lighter);
             color: var(--dark);
         }
-        
+
         .dropdown-content1 a:hover {
             background-color: var(--lighter);
             color: var(--dark);
         }
-        
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        
+
         .dropdown1:hover .dropdown-content1 {
             display: block;
         }
-        
+
         footer {
             text-align: center;
             background-color: var(--darker);
             color: white;
             padding: 1.4%;
         }
-        
+
         #notice {
             color: var(--lighter);
             background-color: var(--darker);
             padding: 14px 16px;
             font-size: 17px;
         }
-        
+
         .icon-bar {
             position: fixed;
             top: 71%;
@@ -273,7 +273,7 @@
             -ms-transform: translateX(0%);
             transform: translateX(0%);
         }
-        
+
         .icon-bar a {
             display: block;
             text-align: end;
@@ -282,36 +282,36 @@
             color: white;
             font-size: 20px;
         }
-        
+
         .icon-bar a:hover {
             background-color: #000;
         }
-        
+
         .facebook {
             background: #3b5998;
             color: white;
         }
-        
+
         .twitter {
             background: #55acee;
             color: white;
         }
-        
+
         .google {
             background: #dd4b39;
             color: white;
         }
-        
+
         .linkedin {
             background: #007bb5;
             color: white;
         }
-        
+
         .youtube {
             background: #bb0000;
             color: white;
         }
-        
+
         .parallax {
             background-color: #ced4da;
             min-height: 800px;
@@ -320,41 +320,41 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         #logo {
             padding-right: 25px;
             height: 65px;
             width: 65px;
         }
-        
+
         .parallax {
             background-attachment: scroll;
         }
-        
+
         @media (min-width: 640px) {
             body {
                 font-size: 1rem;
             }
         }
-        
+
         @media (min-width:960px) {
             body {
                 font-size: 1.2rem;
             }
         }
-        
+
         @media (min-width:1100px) {
             body {
                 font-size: 1.5rem;
             }
         }
-        
+
         .sticky {
             position: -webkit-sticky;
             position: sticky;
             top: 0;
         }
-        
+
         input[type=text],
         select,
         textarea {
@@ -368,7 +368,7 @@
             margin-bottom: 16px;
             resize: vertical;
         }
-        
+
         input[type=number],
         select,
         textarea {
@@ -382,7 +382,7 @@
             margin-bottom: 16px;
             resize: vertical;
         }
-        
+
         input[type=email],
         select,
         textarea {
@@ -396,7 +396,7 @@
             margin-bottom: 16px;
             resize: vertical;
         }
-        
+
         input[type=submit] {
             background-color: var(--dark);
             color: white;
@@ -405,17 +405,17 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        
+
         input[type=submit]:hover {
             background-color: var(--darker);
         }
-        
+
         .container {
             border-radius: 5px;
             background-color: inherit;
             padding: 20px;
         }
-        
+
         .contact {
             padding-left: 60px;
             padding-right: 60px;
@@ -436,7 +436,7 @@
             <div>
                 <img id="logo" src="logo.png" alt="" width="100" height="100">
             </div>
-            <div id="h1"><a href="lit.html">NVPSA</a></div>
+            <div id="h1"><a href="index.html">NVPSA</a></div>
             <div class="head-des">
                 <div id="h2">Nutan Vidyalaya</div>
                 <div id="h2">Past Students Association</div>
@@ -449,7 +449,7 @@
 
 <body>
     <div class="topnav">
-        <a href="lit.html">Home</a>
+        <a href="index.html">Home</a>
         <div class="dropdown">
             <button class="dropbtn">About Us </button>
             <div class="dropdown-content">
@@ -476,22 +476,26 @@
     <hr>
     <div class="sticky">
         <div id="notice" class="notice">
-            <marquee behavior="scroll" direction="right" scrollamount="3">Latest News and Events will be shown here <a href="https://www.google.com/" class="clk">Click here</a></marquee>
+            <marquee behavior="scroll" direction="right" scrollamount="3">Latest News and Events will be shown here <a
+                    href="https://www.google.com/" class="clk">Click here</a></marquee>
         </div>
     </div>
 
     <div class="icon-bar">
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsltpSFMKfdsCtNZcLwPWrDgsvSTqqLBMZlrqDHJKcvnPdfLVjkDVgGdsTpdvzNwBVmmZwfQ" target="blank" class="google"><i class="fa fa-google"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100069720308914" target="blank" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://youtube.com/channel/UC3QE1MoNApo6jSke07RjLAg" target="blank" class="youtube"><i class="fa fa-youtube"></i></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsltpSFMKfdsCtNZcLwPWrDgsvSTqqLBMZlrqDHJKcvnPdfLVjkDVgGdsTpdvzNwBVmmZwfQ"
+            target="blank" class="google"><i class="fa fa-google"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100069720308914" target="blank" class="facebook"><i
+                class="fa fa-facebook"></i></a>
+        <a href="https://youtube.com/channel/UC3QE1MoNApo6jSke07RjLAg" target="blank" class="youtube"><i
+                class="fa fa-youtube"></i></a>
         <a href="https://twitter.com/?lang=en" target="blank" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="https://www.linkedin.com/signup" target="blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
     </div>
     <div class="parallax">
         <div class="contact">
             <div class="container">
-                <form action="https://formsubmit.co/anirudhg20029@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://google.co.in/">
+                <form action="https://formsubmit.co/nvpsglb@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://nvps.live">
                     <input type="hidden" name="_captcha" value="false">
                     <label for="fname">Name</label>
                     <input type="text" id="fname" name="Name" placeholder="Your name.." required>
@@ -503,7 +507,8 @@
                     <input type="email" name="Email" placeholder="Your Email ID.." required>
                     <!-- <input type="email" id="email" name="email" placeholder="Your Email ID.." required> -->
                     <label for="subject">Feedback / Query</label>
-                    <textarea id="subject" name="Subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="subject" name="Subject" placeholder="Write something.."
+                        style="height:200px"></textarea>
                     <input type="submit" value="Submit">
                 </form>
             </div>

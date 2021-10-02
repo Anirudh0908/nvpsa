@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* font-family: 'Rubik', sans-serif; */
+        
+         :root {
+            --darker: #003566;
+            --dark: #118ab2;
+            --regular: #240046;
+            --light: #e9ecef;
+            --lighter: #e9ecef;
+        }
+        
+        html,
+        body {
+            min-height: 100%;
+            font-size: 100%;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        * {
+            /* padding: 0; */
+            font-family: "Rubik", sans-serif;
+            border-style: none;
+            margin: 0;
+        }
+        
+        #h1 {
+            /* text-align: center; */
+            font-size: 67px;
+            font-family: "Montserrat", sans-serif;
+            /* letter-spacing: 3px; */
+            font-weight: 500;
+            font-family: "Rubik", sans-serif;
+            /* font-family: "Open Sans"; */
+            color: var(--lighter);
+        }
+        
+        #h1:hover {
+            font-weight: 600;
+        }
+        
+        #h2 {
+            /* text-align: center; */
+            font-size: x-large;
+            font-family: "Rubik", sans-serif;
+            font-weight: 400;
+            /* font-family: cursive; */
+            color: var(--light);
+        }
+        
+        .headings {
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+            align-items: center;
+        }
+        
+        .head-des {
+            flex-direction: column;
+            margin-left: 23px;
+        }
+        
+        .clk,
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .clk:hover {
+            color: var(--light);
+        }
+        
+        fieldset {
+            background-color: var(--darker);
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: var(--dark);
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: var(--lighter);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover,
+        .dropdown:hover .dropbtn,
+        .dropdown1:hover .dropbtn1 {
+            background-color: var(--lighter);
+            color: var(--dark);
+        }
+        
+        .topnav a.active {
+            background-color: var(--lighter);
+            color: var(--dark);
+        }
+        
+        .topnav input[type="text"] {
+            background-color: var(--lighter);
+            color: var(--dark);
+            float: right;
+            padding: 7px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 18px;
+            font-size: 18px;
+            width: 85px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        
+        .topnav input[type="text"]:focus {
+            width: 40%;
+            border-style: none;
+        }
+        
+        .topnav input[type="text"]::placeholder {
+            color: var(--dark);
+        }
+        
+        #mySidenav a {
+            position: absolute;
+            left: -127px;
+            transition: 0.3s;
+            padding: 30px;
+            width: 115px;
+            text-decoration: none;
+            font-size: 17px;
+            color: var(--lighter);
+            border-radius: 10px 10px 10px 10px;
+            text-align: left;
+        }
+        
+        #mySidenav a:hover {
+            left: 0;
+        }
+        
+        #register {
+            top: 327px;
+            background-color: var(--darker);
+        }
+        
+        #alumni {
+            top: 238px;
+            background-color: var(--darker);
+        }
+        
+        #committe {
+            top: 435px;
+            background-color: var(--darker);
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown1 {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: var(--lighter);
+            padding: 14px 16px;
+            background-color: var(--dark);
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown1 .dropbtn1 {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: var(--lighter);
+            padding: 14px 16px;
+            background-color: var(--dark);
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dark);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: var(--dark);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: var(--lighter);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content1 a {
+            float: none;
+            color: var(--lighter);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--lighter);
+            color: var(--dark);
+        }
+        
+        .dropdown-content1 a:hover {
+            background-color: var(--lighter);
+            color: var(--dark);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            background-color: var(--darker);
+            color: white;
+            padding: 1.4%;
+        }
+        
+        #notice {
+            color: var(--lighter);
+            background-color: var(--darker);
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+        
+        .icon-bar {
+            position: fixed;
+            top: 71%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+        
+        .icon-bar a {
+            display: block;
+            text-align: end;
+            padding: 10px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+        
+        .facebook {
+            background: #3b5998;
+            color: white;
+        }
+        
+        .twitter {
+            background: #55acee;
+            color: white;
+        }
+        
+        .google {
+            background: #dd4b39;
+            color: white;
+        }
+        
+        .linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        
+        .youtube {
+            background: #bb0000;
+            color: white;
+        }
+        
+        .parallax {
+            /* background-color: #ced4da; */
+            min-height: 1500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #logo {
+            padding-right: 25px;
+            height: 65px;
+            width: 65px;
+        }
+        
+        .parallax {
+            background-attachment: scroll;
+        }
+        
+        @media (min-width: 640px) {
+            body {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (min-width:960px) {
+            body {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (min-width:1100px) {
+            body {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        
+        .sticky1 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 50px;
+        }
+        
+        #headerh {
+            text-align: center;
+            font-family: 'Italianno', cursive;
+            font-size: 70px;
+        }
+        
+        #preamble1 {
+            font-family: 'Ephasis', cursive;
+            padding-left: 190px;
+            padding-right: 190px;
+            padding-top: 50px;
+            font-size: 33px;
+        }
+        
+        #image122 {
+            padding-left: 75px;
+            padding-top: 100px;
+        }
+        
+        .jumbotron {
+            display: flex;
+            flex-direction: row;
+            /* border: 5px solid#000; */
+            background-color: #0f9cdda4;
+            padding-bottom: 8px;
+            justify-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        .links-jumbo {
+            display: flex;
+            /* border: 5px solid#000; */
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        .links-jumbo a {
+            font-size: 1em;
+            margin: 10px 10px 0px 10px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: var(--darker);
+            color: white;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <title>NVPSA | Home</title>
+    <hr>
+    <fieldset style="color: rgb(59, 3, 3);">
+        <div class="headings">
+            <div>
+                <img id="logo" src="logo.png" alt="" width="100" height="100">
+            </div>
+            <div id="h1"><a href="lit.html">NVPSA</a></div>
+            <div class="head-des">
+                <div id="h2">Nutan Vidyalaya</div>
+                <div id="h2">Past Students Association</div>
+            </div>
+
+        </div>
+    </fieldset>
+    <hr>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="lit.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Us </button>
+            <div class="dropdown-content">
+                <a href="#thebeginning">The Beginning</a>
+                <a href="#hisofassoc">History of the Association</a>
+                <a href="#pastpres">Past Presidents and Seceratries</a>
+                <a href="#pridemembers">Our Pride members</a>
+            </div>
+
+        </div>
+        <a href="archives.html">Gallery</a>
+        <a href="login2.html">Login</a>
+        <a href="contact.html">Contact</a>
+
+
+        <input type="text" placeholder="Search">
+    </div>
+    <!-- <div id="mySidenav" class="sidenav">
+        <a href="list.jpeg" target="blank" id="committe">Executive Committe</a>
+        <
+        <a href="https://forms.gle/mimd3fGazExNP4X18" target="blank" id="register">Alumni Membership</a>
+    </div> -->
+    <hr>
+    <hr>
+    <div class="sticky">
+        <div id="notice" class="notice">
+            <marquee behavior="scroll" direction="right" scrollamount="3">Latest News and Events will be shown here <a href="https://www.google.com/" class="clk">Click here</a></marquee>
+        </div>
+    </div>
+
+    <div class="icon-bar">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsltpSFMKfdsCtNZcLwPWrDgsvSTqqLBMZlrqDHJKcvnPdfLVjkDVgGdsTpdvzNwBVmmZwfQ" target="blank" class="google"><i class="fa fa-google"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100069720308914" target="blank" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://youtube.com/channel/UC3QE1MoNApo6jSke07RjLAg" target="blank" class="youtube"><i class="fa fa-youtube"></i></a>
+        <a href="https://twitter.com/?lang=en" target="blank" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/signup" target="blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <div class="jumbotron sticky1">
+        <!-- <div class="bg-jumbo"></div> -->
+        <div class="links-jumbo">
+            <a href="https://forms.gle/mimd3fGazExNP4X18" target="_blank" id="register">Alumni Membership</a>
+            <a href="list.pdf" target="_blank" id="alumni">Alumni</a>
+            <a href="list.jpeg" target="_blank" id="committe">Executive Committe</a>
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="preamble">
+            <h1 id="headerh">The Preamble</h1>
+            <p id="preamble1">
+                It is a matter of pride for all of us to be the past student of more than 100 years old outstdanding educational society, which started not only to impart education but to imbibe National values in all of its students. the Nutan Vidyalaya Educational
+                Society has rendered yeoman service in the feild of education during the last nine decades. Over the years the society has gradually developed and many new educational institutions have come up. Past student of any institution have a active
+                role to play in the overall development of its Alma Matter. Our past students are sucessful in thier respective professions since many decades. We have the good fortune to find our past students in all walks of life leading a sucessful
+                carrer and catering to the needs of the commuity where they live in.
+            </p>
+        </div>
+        <div id="image122">
+            <img src="frnt.jpeg" alt="" srcset="" width="1300" height="600">
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>&copy; Copyright 2021 Anirudh <br> All Rights Reserved. </footer>
+    </div>
+
+</body>
+
+</html>
